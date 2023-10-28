@@ -16,6 +16,6 @@ namespace ACCA_Backend.DataAccess.Entities
         public DateTime CreationDate { get; set; } = DateTime.UtcNow;
 
         public DateTime ExpirationDate { get; set; }
-        public string UserType { get; set; }
+        public int UserType { get; set; }
     }
 }
