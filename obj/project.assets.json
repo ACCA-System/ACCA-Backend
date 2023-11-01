@@ -3691,23 +3691,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\EMILIANOSANCHEZ\\.nuget\\packages\\": {},
+    "C:\\Users\\josel\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EMILIANOSANCHEZ\\Documents\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj",
+      "projectUniqueName": "C:\\VS-TRABAJOS\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj",
       "projectName": "ACCA-Backend",
-      "projectPath": "C:\\Users\\EMILIANOSANCHEZ\\Documents\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj",
-      "packagesPath": "C:\\Users\\EMILIANOSANCHEZ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EMILIANOSANCHEZ\\Documents\\ACCA\\ACCA-Backend\\obj\\",
+      "projectPath": "C:\\VS-TRABAJOS\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj",
+      "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
+      "outputPath": "C:\\VS-TRABAJOS\\ACCA\\ACCA-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\EMILIANOSANCHEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
