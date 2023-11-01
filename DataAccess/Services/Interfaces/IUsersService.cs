@@ -5,7 +5,7 @@ namespace ACCA_Backend.DataAccess.Services.Interfaces
 {
     public interface IUsersService
     {
-        public Task<Users> GetUserByEmailAndPassword(string email, string pass);
+        public Task<Users> GetUserByEmailAndPassword(string email, string password);
         public Task<Users> GetUser(int userId);
         public Task<List<Users>> GetUsers();
         public Task<UsersDTO> PostUser(UsersDTO user);

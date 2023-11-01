@@ -6,6 +6,7 @@ namespace ACCA_Backend.DataAccess.Repository.Context
 {
     public class AccaSystemContext : DbContext
     {
+
         private static AccaSystemContext? accaSystemContext;
         public AccaSystemContext()
         {

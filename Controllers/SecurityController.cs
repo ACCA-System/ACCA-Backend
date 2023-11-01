@@ -2,7 +2,8 @@
 using ACCA_Backend.DataAccess.Entities;
 using ACCA_Backend.DataAccess.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
+using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -53,7 +54,7 @@ namespace ACCA_Backend.Controllers
         [HttpPost]
         [Route("/Login")]
         [AllowAnonymous]
-        public async Task<ActionResult<Sessions>> Login([FromBody] UsersDTO user)
+        public async Task<ActionResult<Sessions>> Login([FromBody] LoginDTO user)
         {
             try
             {
@@ -64,7 +65,7 @@ namespace ACCA_Backend.Controllers
             }
             catch (UnauthorizedAccessException)
             {
-                return Unauthorized("User and password does not match");
+                return Unauthorized("Email or password does not match");
             }
             catch (Exception)
             {
