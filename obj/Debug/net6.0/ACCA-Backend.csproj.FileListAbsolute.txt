@@ -94,3 +94,4 @@ C:\Users\EMILIANOSANCHEZ\Documents\ACCA\ACCA-Backend\bin\Debug\net6.0\Microsoft.
 C:\Users\EMILIANOSANCHEZ\Documents\ACCA\ACCA-Backend\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\EMILIANOSANCHEZ\Documents\ACCA\ACCA-Backend\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\EMILIANOSANCHEZ\Documents\ACCA\ACCA-Backend\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\EMILIANOSANCHEZ\Documents\ACCA\ACCA-Backend\bin\Debug\net6.0\nlog.config
