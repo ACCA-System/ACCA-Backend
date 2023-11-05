@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EMILIANOSANCHEZ\\Documents\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj": {}
+    "C:\\Users\\elmil\\Documents\\ProgramacionWeb\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EMILIANOSANCHEZ\\Documents\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj": {
+    "C:\\Users\\elmil\\Documents\\ProgramacionWeb\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EMILIANOSANCHEZ\\Documents\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj",
+        "projectUniqueName": "C:\\Users\\elmil\\Documents\\ProgramacionWeb\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj",
         "projectName": "ACCA-Backend",
-        "projectPath": "C:\\Users\\EMILIANOSANCHEZ\\Documents\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj",
-        "packagesPath": "C:\\Users\\EMILIANOSANCHEZ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EMILIANOSANCHEZ\\Documents\\ACCA\\ACCA-Backend\\obj\\",
+        "projectPath": "C:\\Users\\elmil\\Documents\\ProgramacionWeb\\ACCA\\ACCA-Backend\\ACCA-Backend.csproj",
+        "packagesPath": "C:\\Users\\elmil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\elmil\\Documents\\ProgramacionWeb\\ACCA\\ACCA-Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\EMILIANOSANCHEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\elmil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

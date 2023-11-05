@@ -1,0 +1,6 @@
+DEBUG|2023-09-13 23:58:54.3371|0|Program|init main 
+INFO|2023-09-13 23:58:56.3582|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7042 
+INFO|2023-09-13 23:58:56.3798|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5042 
+INFO|2023-09-13 23:58:56.3840|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-09-13 23:58:56.3840|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-09-13 23:58:56.3840|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\elmil\Documents\Challenge\challenge-back\Challenge\Challenge\ 

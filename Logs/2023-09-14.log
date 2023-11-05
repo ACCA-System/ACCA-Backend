@@ -1,0 +1,6 @@
+ERROR|2023-09-14 00:00:40.0549|0|Challenge.DataAccess.Services.UsersService|Attempted to perform an unauthorized operation. System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.
+   at Challenge.DataAccess.Services.UsersService.GetUserByUserAndPassword(String email, String pass) in C:\Users\elmil\Documents\Challenge\challenge-back\Challenge\Challenge\DataAccess\Services\UsersService.cs:line 28
+ERROR|2023-09-14 00:00:40.0549|0|Challenge.DataAccess.Services.UsersService|Attempted to perform an unauthorized operation. System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.
+   at Challenge.DataAccess.Services.UsersService.GetUserByUserAndPassword(String email, String pass) in C:\Users\elmil\Documents\Challenge\challenge-back\Challenge\Challenge\DataAccess\Services\UsersService.cs:line 28
+ERROR|2023-09-14 00:00:44.3069|0|Challenge.DataAccess.Services.UsersService|Attempted to perform an unauthorized operation. System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.
+   at Challenge.DataAccess.Services.UsersService.GetUserByUserAndPassword(String email, String pass) in C:\Users\elmil\Documents\Challenge\challenge-back\Challenge\Challenge\DataAccess\Services\UsersService.cs:line 28
