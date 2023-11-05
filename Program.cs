@@ -1,92 +1,25 @@
-using Microsoft.EntityFrameworkCore;
-using NLog;
-using NLog.Web;
-using ACCA_Backend.DataAccess.Repository.Context;
-using ACCA_Backend.Infraestructure;
-using ACCA_Backend.Utils.Security;
+var builder = WebApplication.CreateBuilder(args);
 
-var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
-//NLog: setup the path
-var logPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
-if (!Directory.Exists(logPath))
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    Directory.CreateDirectory(logPath);
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
-NLog.GlobalDiagnosticsContext.Set("LogDirectory", logPath);
-logger.Debug("init main");
 
-try
-{
-    var builder = WebApplication.CreateBuilder(args);
+app.UseHttpsRedirection();
 
-    // NLog: Setup NLog for Dependency injection
-    builder.Logging.ClearProviders();
-    builder.Host.UseNLog();
+app.UseAuthorization();
 
-    builder.Services.AddCors(o =>
-        o.AddDefaultPolicy(b =>
-            b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
+app.MapControllers();
 
-    // Add services to the container.
-    builder.Services.AddControllers();
-
-    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-    builder.Services.AddEndpointsApiExplorer();
-
-    builder.Services.AddSwaggerGen();
-
-    AuthenticationConfig authenticationConfig = new AuthenticationConfig(builder);
-
-    builder.Services.AddSingleton<AuthUtils>(new AuthUtils(builder.Configuration));
-
-    string connectionStringtest = builder.Configuration.GetConnectionString("AccaConnection");
-
-    Environment.SetEnvironmentVariable("Connection", connectionStringtest);
-    builder.Services.AddDbContext<AccaSystemContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("AccaConnection"));
-    });
-
-    DependencyRegistry registry = new DependencyRegistry(builder);
-
-    //services cors
-    builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
-    {
-        builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
-    }));
-    var app = builder.Build();
-
-    // Configure the HTTP request pipeline.
-    if (app.Environment.IsDevelopment())
-    {
-        app.UseSwagger();
-        app.UseSwaggerUI();
-    }
-
-    app.UseHttpsRedirection();
-
-    app.UseCors();
-
-    app.UseRouting();
-
-    app.UseAuthentication();
-    app.UseAuthorization();
-
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapControllers();
-    });
-
-    app.Run();
-}
-catch (Exception ex)
-{
-    //NLog: catch setup errors
-    logger.Error(ex, "Stopped program because of exception");
-    throw;
-}
-finally
-{
-    //Ensure to flush and stop internal timers/ threads before application exi
-    NLog.LogManager.Shutdown();
-}
+app.Run();
