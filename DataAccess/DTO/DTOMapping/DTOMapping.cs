@@ -11,7 +11,7 @@ namespace ACCA_Backend.DataAccess.DTO.DTOMapping
                 Name = users.Name,
                 Email = users.Email,
                 Password = users.Password,
-                UserType = users.UserType,
+                TypeId = users.TypeId,
             };
     }
 }

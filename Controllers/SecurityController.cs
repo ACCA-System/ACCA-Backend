@@ -59,19 +59,24 @@ namespace ACCA_Backend.Controllers
             try
             {
                 var userD = await _usersService.GetUserByEmailAndPassword(user.Email, user.Password);
-                var session = await _sessionService.SaveSession(userD);
+                if (userD == null)
+                {
+                    return Unauthorized("Email or password does not match");
+                }
 
+                var session = await _sessionService.SaveSession(userD);
                 return Ok(session);
             }
             catch (UnauthorizedAccessException)
             {
                 return Unauthorized("Email or password does not match");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                _logger.LogError("Some error happened please contact Sys Admin");
-                return Problem("Some error happened please contact Sys Admin");
+                _logger.LogError(ex, "An error occurred during login.");
+                return Problem("An error occurred during login. Please contact the System Administrator");
             }
         }
+
     }
 }

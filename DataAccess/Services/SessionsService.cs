@@ -47,7 +47,7 @@ namespace ACCA_Backend.DataAccess.Services
                     ExpirationDate = DateTime.UtcNow.AddDays(1),
                     UserId = user.UserId,
                     UserToken = _authUtils.GenerateJWT(user),
-                    UserType = user.UserType
+                    TypeId = user.TypeId
                 };
 
                 await _sessionRepository
