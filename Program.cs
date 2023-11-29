@@ -1,19 +1,29 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using NLog;
 using NLog.Web;
+using System;
+using System.IO;
 using ACCA_Backend.DataAccess.Repository.Context;
 using ACCA_Backend.Infraestructure;
 using ACCA_Backend.Utils.Security;
 
-var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
-//NLog: setup the path
+var logger = NLog.LogManager.Setup()
+    .LoadConfigurationFromAppSettings()
+    .GetCurrentClassLogger();
+
+// NLog: setup the path
 var logPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
 if (!Directory.Exists(logPath))
 {
     Directory.CreateDirectory(logPath);
 }
 NLog.GlobalDiagnosticsContext.Set("LogDirectory", logPath);
-logger.Debug("init main");
+logger.Debug("Init main");
 
 try
 {
@@ -24,13 +34,11 @@ try
     builder.Host.UseNLog();
 
     builder.Services.AddCors(o =>
-        o.AddDefaultPolicy(b =>
+        o.AddPolicy("corsapp", b =>
             b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
-    // Add services to the container.
     builder.Services.AddControllers();
 
-    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
 
     builder.Services.AddSwaggerGen();
@@ -39,33 +47,33 @@ try
 
     builder.Services.AddSingleton<AuthUtils>(new AuthUtils(builder.Configuration));
 
-    string connectionStringtest = builder.Configuration.GetConnectionString("AccaConnection");
+    string connectionString = builder.Configuration.GetConnectionString("AccaConnection");
 
-    Environment.SetEnvironmentVariable("Connection", connectionStringtest);
     builder.Services.AddDbContext<AccaSystemContext>(options =>
     {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("AccaConnection"));
+        options.UseSqlServer(connectionString);
     });
 
     DependencyRegistry registry = new DependencyRegistry(builder);
 
-    //services cors
-    builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
-    {
-        builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
-    }));
     var app = builder.Build();
 
-    // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
-        app.UseSwagger();
-        app.UseSwaggerUI();
+        app.UseSwagger(c =>
+        {
+            c.RouteTemplate = "swagger/{documentName}/swagger.json";
+        });
+
+        app.UseSwaggerUI(c =>
+        {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "ACCABackend");
+        });
     }
 
     app.UseHttpsRedirection();
 
-    app.UseCors();
+    app.UseCors("corsapp");
 
     app.UseRouting();
 
@@ -81,12 +89,10 @@ try
 }
 catch (Exception ex)
 {
-    //NLog: catch setup errors
     logger.Error(ex, "Stopped program because of exception");
     throw;
 }
 finally
 {
-    //Ensure to flush and stop internal timers/ threads before application exi
     NLog.LogManager.Shutdown();
 }
