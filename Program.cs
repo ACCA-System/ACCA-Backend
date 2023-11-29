@@ -58,18 +58,19 @@ try
 
     var app = builder.Build();
 
-    if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+{
+    app.UseSwagger(c =>
     {
-        app.UseSwagger(c =>
-        {
-            c.RouteTemplate = "swagger/{documentName}/swagger.json";
-        });
+        c.RouteTemplate = "swagger/{documentName}/swagger.json";
+    });
 
-        app.UseSwaggerUI(c =>
-        {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "ACCABackend");
-        });
-    }
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "ACCABackend");
+    });
+}
+
 
     app.UseHttpsRedirection();
 
