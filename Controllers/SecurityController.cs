@@ -39,11 +39,11 @@ namespace ACCA_Backend.Controllers
             }
             catch (UnauthorizedAccessException)
             {
-                return Unauthorized("Session Expired");
+                return Unauthorized("La sesión ha expirado");
             }
             catch (NullReferenceException)
             {
-                return Unauthorized("Session Expired");
+                return Unauthorized("La sesion ha expirado");
             }
             catch (Exception)
             {
@@ -61,7 +61,7 @@ namespace ACCA_Backend.Controllers
                 var userD = await _usersService.GetUserByEmailAndPassword(user.Email, user.Password);
                 if (userD == null)
                 {
-                    return Unauthorized("Email or password does not match");
+                    return Unauthorized("El email/contraseña no coinciden");
                 }
 
                 var session = await _sessionService.SaveSession(userD);
@@ -69,11 +69,11 @@ namespace ACCA_Backend.Controllers
             }
             catch (UnauthorizedAccessException)
             {
-                return Unauthorized("Email or password does not match");
+                return Unauthorized("El email/contraseña no coinciden");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occurred during login.");
+                _logger.LogError(ex, "Ocurrió un problema durante el inicio de sesión");
                 return Problem("An error occurred during login. Please contact the System Administrator");
             }
         }

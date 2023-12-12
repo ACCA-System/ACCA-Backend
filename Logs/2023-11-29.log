@@ -486,3 +486,9 @@ WARN|2023-11-29 14:49:15.0067|0|Microsoft.AspNetCore.Server.Kestrel|Connection p
    at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|13_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)
 ClientConnectionId:82917971-3366-4457-9ed8-37240596c963
 Error Number:40615,State:1,Class:14
+DEBUG|2023-11-29 19:13:06.3642|0|Program|Init main 
+INFO|2023-11-29 19:13:08.6441|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7200 
+INFO|2023-11-29 19:13:08.6949|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5215 
+INFO|2023-11-29 19:13:08.7089|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-11-29 19:13:08.7089|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-11-29 19:13:08.7089|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\EMILIANOSANCHEZ\Documents\ACCA\ACCA-Backend\ 

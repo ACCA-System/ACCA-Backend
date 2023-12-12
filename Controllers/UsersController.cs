@@ -73,7 +73,7 @@ namespace ACCA_Backend.Controllers
                 catch (Exception ex)
                 {
                     if (ex.InnerException.Message.ToLower().Contains("duplicate"))
-                        return BadRequest("User already exist");
+                        return BadRequest("El Email ya ha sido Registrado");
                     else
                         return Problem("Some error happened please contact Sys Admin");
                 }
@@ -88,7 +88,7 @@ namespace ACCA_Backend.Controllers
                 var User = await _usersService.UpdateUser(userId);
                 if (User == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return BadRequest("El usuario no existe");
                 }
                 return Ok(User);
             }
@@ -107,7 +107,7 @@ namespace ACCA_Backend.Controllers
                 var User = await _usersService.DeleteUser(userId);
                 if (User == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return BadRequest("El usuario no existe");
                 }
                 return Ok(User);
             }

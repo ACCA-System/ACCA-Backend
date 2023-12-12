@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzq8RNXq4wEyVvRwpmyUnugAAAAACAAAAAAAQZgAAAAEAACAAAAA2+6ZMra3p7f7XT9Y/pUOw0+skoL+JDVnnIZOzJSrPYAAAAAAOgAAAAAIAACAAAAA9TkvKEjsEvktIvjA6JjXF3fBDM8QBWb1IO8dvHov73YAAAAC+HxZNbAu4yOoE1mF5dmwpqDf1WnPsjlVGJfLTHGwZlFe+oxw5z1UOusp0DsniJBugFHX7+oOLUCZmqXPJYyTQDk9M4s06CyjhrjeNL2E+V/scHifVFOzbMt5ZLyLZv3JQOARW1Ol80ekfayvJfrpcpsr6O8l3MIQMumfl9E194UAAAABWS2Qme3adKUxG26orKmoB2cWuD4MC8DyMo4UPhCfMFqok2RlRo3qP+7IXj4pBfzyrNlu0AE0Vo9H7Yh1FKSwJ</EncryptedPassword>
+    <History>True|2023-12-12T18:17:10.2849137Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
