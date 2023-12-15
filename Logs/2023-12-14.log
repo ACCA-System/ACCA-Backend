@@ -1,0 +1,42 @@
+DEBUG|2023-12-14 20:05:05.2077|0|Program|Init main 
+INFO|2023-12-14 20:05:06.0219|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7200 
+INFO|2023-12-14 20:05:06.0336|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5215 
+INFO|2023-12-14 20:05:06.0336|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-12-14 20:05:06.0336|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-12-14 20:05:06.0336|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Admin\Documents\GitHub\ACCA-Backend\ 
+DEBUG|2023-12-14 20:06:27.1510|0|Program|Init main 
+INFO|2023-12-14 20:06:27.7680|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7200 
+INFO|2023-12-14 20:06:27.7794|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5215 
+INFO|2023-12-14 20:06:27.7794|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-12-14 20:06:27.7794|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-12-14 20:06:27.7794|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Admin\Documents\GitHub\ACCA-Backend\ 
+DEBUG|2023-12-14 20:07:26.0867|0|Program|Init main 
+INFO|2023-12-14 20:07:26.7660|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7200 
+INFO|2023-12-14 20:07:26.7809|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5215 
+INFO|2023-12-14 20:07:26.7809|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-12-14 20:07:26.7809|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-12-14 20:07:26.7809|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Admin\Documents\GitHub\ACCA-Backend\ 
+DEBUG|2023-12-14 20:07:35.0206|0|Program|Init main 
+INFO|2023-12-14 20:07:35.6582|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7200 
+INFO|2023-12-14 20:07:35.6692|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5215 
+INFO|2023-12-14 20:07:35.6692|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-12-14 20:07:35.6692|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-12-14 20:07:35.6692|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Admin\Documents\GitHub\ACCA-Backend\ 
+DEBUG|2023-12-14 20:09:15.0900|0|Program|Init main 
+INFO|2023-12-14 20:09:15.6752|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7200 
+INFO|2023-12-14 20:09:15.6861|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5215 
+INFO|2023-12-14 20:09:15.6861|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-12-14 20:09:15.6861|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-12-14 20:09:15.6861|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Admin\Documents\GitHub\ACCA-Backend\ 
+DEBUG|2023-12-14 20:11:37.8652|0|Program|Init main 
+INFO|2023-12-14 20:11:38.4749|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7200 
+INFO|2023-12-14 20:11:38.4883|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5215 
+INFO|2023-12-14 20:11:38.4883|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-12-14 20:11:38.4883|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-12-14 20:11:38.4883|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Admin\Documents\GitHub\ACCA-Backend\ 
+DEBUG|2023-12-14 20:20:55.7051|0|Program|Init main 
+INFO|2023-12-14 20:20:56.6002|14|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7200 
+INFO|2023-12-14 20:20:56.6002|14|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5215 
+INFO|2023-12-14 20:20:56.6129|0|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+INFO|2023-12-14 20:20:56.6129|0|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+INFO|2023-12-14 20:20:56.6129|0|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Admin\Documents\GitHub\ACCA-Backend\ 
