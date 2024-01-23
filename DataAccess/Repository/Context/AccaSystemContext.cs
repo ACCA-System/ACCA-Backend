@@ -17,6 +17,7 @@ namespace ACCA_Backend.DataAccess.Repository.Context
 
         public DbSet<Users> Users { get; set; }
         public DbSet<Sessions> Sessions { get; set; }
+        public DbSet<DonationType> DonationType { get; set; }
 
         public static AccaSystemContext Create()
         {
